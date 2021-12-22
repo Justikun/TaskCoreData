@@ -18,7 +18,7 @@ class TaskListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         TaskController.shared.fetchTasks()
-   i     tableView.reloadData()
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
