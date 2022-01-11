@@ -18,6 +18,7 @@
 		36978E7B2772B38B009527E1 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36978E7A2772B38B009527E1 /* Task+Convenience.swift */; };
 		36978E7D2772B440009527E1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36978E7C2772B440009527E1 /* CoreDataStack.swift */; };
 		36978E802772B5C8009527E1 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36978E7F2772B5C8009527E1 /* TaskController.swift */; };
+		36978EA927741C65009527E1 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36978EA827741C65009527E1 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		36978E7A2772B38B009527E1 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		36978E7C2772B440009527E1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		36978E7F2772B5C8009527E1 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		36978EA827741C65009527E1 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		36978E5B2772B006009527E1 /* TasksCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				36978EA727741C0F009527E1 /* CustomCells */,
 				36978E7E2772B5BF009527E1 /* Controllers */,
 				36978E752772B0AF009527E1 /* Views */,
 				36978E742772B0A5009527E1 /* CoreData */,
@@ -112,6 +115,14 @@
 				36978E7F2772B5C8009527E1 /* TaskController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36978EA727741C0F009527E1 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				36978EA827741C65009527E1 /* TaskTableViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			files = (
 				36978E7D2772B440009527E1 /* CoreDataStack.swift in Sources */,
 				36978E5D2772B006009527E1 /* AppDelegate.swift in Sources */,
+				36978EA927741C65009527E1 /* TaskTableViewCell.swift in Sources */,
 				36978E792772B16F009527E1 /* TaskDetailViewController.swift in Sources */,
 				36978E7B2772B38B009527E1 /* Task+Convenience.swift in Sources */,
 				36978E5F2772B006009527E1 /* SceneDelegate.swift in Sources */,

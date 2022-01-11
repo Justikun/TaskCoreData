@@ -17,23 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" textLabel="cqH-VA-51h" style="IBUITableViewCellStyleDefault" id="Cc0-0T-e4y">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="Cc0-0T-e4y" customClass="TaskTableViewCell" customModule="TasksCoreData" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cc0-0T-e4y" id="qsQ-Vu-Pab">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cqH-VA-51h">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HX-Rj-qpn">
+                                            <rect key="frame" x="24" y="15" width="336" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-cX-q0B">
+                                            <rect key="frame" x="364" y="4" width="46" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="3RY-cX-q0B" secondAttribute="height" multiplier="1:1" id="zTn-0p-qkp"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9HX-Rj-qpn" secondAttribute="bottom" constant="4" id="Ghu-IZ-3bz"/>
+                                        <constraint firstItem="3RY-cX-q0B" firstAttribute="leading" secondItem="9HX-Rj-qpn" secondAttribute="trailing" constant="4" id="NwY-jX-ub4"/>
+                                        <constraint firstItem="3RY-cX-q0B" firstAttribute="top" secondItem="qsQ-Vu-Pab" secondAttribute="top" constant="4" id="OVW-Fw-rqt"/>
+                                        <constraint firstItem="9HX-Rj-qpn" firstAttribute="top" secondItem="qsQ-Vu-Pab" secondAttribute="topMargin" constant="4" id="Q6a-Kh-CDi"/>
+                                        <constraint firstItem="9HX-Rj-qpn" firstAttribute="leading" secondItem="qsQ-Vu-Pab" secondAttribute="leadingMargin" constant="4" id="SyN-UC-ftC"/>
+                                        <constraint firstAttribute="bottom" secondItem="3RY-cX-q0B" secondAttribute="bottom" constant="4" id="dwX-HX-tlO"/>
+                                        <constraint firstAttribute="trailing" secondItem="3RY-cX-q0B" secondAttribute="trailing" constant="4" id="zJs-UR-ftD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="completionButton" destination="3RY-cX-q0B" id="goO-Rk-dA6"/>
+                                    <outlet property="completionButtonTapped" destination="3RY-cX-q0B" id="qCW-Vu-MJ1"/>
+                                    <outlet property="taskNameLabel" destination="9HX-Rj-qpn" id="rlT-ne-svP"/>
                                     <segue destination="u2d-ZX-Zz6" kind="show" identifier="toTaskDetailVC" id="gS1-tI-sTm"/>
                                 </connections>
                             </tableViewCell>
@@ -137,6 +156,7 @@
         <segue reference="gS1-tI-sTm"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
